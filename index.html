@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="game.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Checkers Game</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="redside">
+        <button id="btnr">Tahtayı Kendinize Çevirin</button>
+        <br></br>
+        <div class="circle" id="cirP"></div>
+        
+        <h2 id="redwin">KIRMIZI TARAF KAZANDI!!</h2>
+        <p>OYUN KURALLARI: Kendi taşlarınızı rakibinizden önce çapraz köşeye
+          (yani başlarken rakibinizin taşlarının olduğu yere) taşımanız gerekiyor.
+        Taşlarınızı sağa, sola ve ileri birer kare hareket ettirebilirsiniz.
+      Eğer önünüzde kendi taşınız ya da rakibin taşı varsa üzerlerinden bitişiklerindeki
+       boşluğa atlamaya devam edip daha fazla yol alabilirsiniz. 
+       </p>
+      </div>
+      <div id="board">
+        <div class="row">
+          
+          <div class="odd" id="a8" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circlep" id="cirpa8" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="even" id="b8" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circlep" id="cirpb8" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="odd" id="c8" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circlep" id="cirpc8" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="even" id="d8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="e8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="f8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="g8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="h8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="row">
+          
+          <div class="even" id="a7" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circlep" id="cirpa7" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="odd" id="b7" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circlep" id="cirpb7" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="even" id="c7" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circlep" id="cirpc7" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="odd" id="d7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="e7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="f7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="g7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="h7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="row">
+          
+          <div class="odd" id="a6" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circlep" id="cirpa6" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="even" id="b6" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circlep" id="cirpb6" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="odd" id="c6" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circlep" id="cirpc6" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="even" id="d6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="e6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="f6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="g6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="h6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="row">
+          
+          <div class="even" id="a5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="b5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="c5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="d5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="e5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="f5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="g5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="h5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="row">
+          
+          <div class="odd" id="a4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="b4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="c4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="d4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="e4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="f4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="g4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="h4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="row">
+          
+          <div class="even" id="a3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="b3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="c3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="d3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="e3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="f3" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circleb" id="cirbf3" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="even" id="g3" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circleb" id="cirbg3" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="odd" id="h3" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circleb" id="cirbh3" draggable="true" ondragstart="drag(event)"></div></div>
+        </div>
+        <div class="row">
+        
+          <div class="odd" id="a2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="b2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="c2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="d2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="e2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="f2" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circleb" id="cirbf2" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="odd" id="g2" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circleb" id="cirbg2" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="even" id="h2" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circleb" id="cirbh2" draggable="true" ondragstart="drag(event)"></div></div>
+        </div>
+        <div class="row">
+          
+          <div class="even" id="a1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="b1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="c1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="d1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="even" id="e1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="odd" id="f1" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circleb" id="cirbf1" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="even" id="g1" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circleb" id="cirbg1" draggable="true" ondragstart="drag(event)"></div></div>
+          <div class="odd" id="h1" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="circleb" id="cirbh1" draggable="true" ondragstart="drag(event)"></div></div>
+        </div>
+       
+      </div>
+      <div id="blackside">
+        <button id="btnb">Tahtayı Kendinize Çevirin</button>
+        <br></br>
+        <div class="circle" id="cirB"></div>
+        
+        <h2 id="blackwin">SİYAH TARAF KAZANDI!!</h2>
+       
+      </div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
